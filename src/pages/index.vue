@@ -102,8 +102,8 @@ useHead({
       <!--Side Features Section-->
       <MarketingSideFeatures />
 
-      <!--About section-->
-      <MarketingAbout />
+      <!-- game -->
+      <Game />
 
       <!--About section-->
       <MarketingAbout />

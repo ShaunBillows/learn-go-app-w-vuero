@@ -5,12 +5,14 @@
 declare module 'vue' {
   export interface GlobalComponents {
     AnimatedLogo: typeof import('./src/components/svg/AnimatedLogo.vue')['default']
+    Answers: typeof import('./src/components/multi-choice-qn-game/components/Answers.vue')['default']
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
     AuthLayout: typeof import('./src/layouts/AuthLayout.vue')['default']
     DashboardsMobileSubsidebar: typeof import('./src/layouts/mobile-subsidebars/DashboardsMobileSubsidebar.vue')['default']
     DashboardsSubsidebar: typeof import('./src/layouts/sidebar-subsidebar/DashboardsSubsidebar.vue')['default']
     FlightResultsDropdown: typeof import('./src/components/partials/dropdowns/FlightResultsDropdown.vue')['default']
     FlightsDashboard: typeof import('./src/components/pages/dashboards/business/FlightsDashboard.vue')['default']
+    Game: typeof import('./src/components/multi-choice-qn-game/Game.vue')['default']
     LandingEmptyNavigation: typeof import('./src/components/partials/landing/LandingEmptyNavigation.vue')['default']
     LandingFooter: typeof import('./src/components/partials/landing/LandingFooter.vue')['default']
     LandingLayout: typeof import('./src/layouts/LandingLayout.vue')['default']
