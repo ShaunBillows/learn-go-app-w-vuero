@@ -1,10 +1,15 @@
 import axios from 'axios'
 
-export const fetchRandomQuestion = async () => {
-  try {
-    const { data } = await axios.get('http://localhost:1323/questions/random')
-    return data
-  } catch (error) {
-    return { error: error }
+class QuestionService {
+  baseUrl = 'http://localhost:1323/questions'
+  random = async () => {
+    try {
+      const { data } = await axios.get(`${this.baseUrl}/random`)
+      return data
+    } catch (error) {
+      return { error: error }
+    }
   }
 }
+
+export default new QuestionService()

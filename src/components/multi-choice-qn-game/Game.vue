@@ -83,7 +83,7 @@
 <script setup lang="ts">
 import { computed, onMounted, toRefs, reactive } from 'vue'
 import CurrentAnswers from './components/Answers.vue'
-import { fetchRandomQuestion } from '../../services/questionService'
+import QuestionService from '../../services/questionService'
 
 interface Answer {
   text: string
@@ -112,7 +112,7 @@ const state = reactive({
 
 const getQuestion = async () => {
   state.questionAttempted = false
-  state.data = await fetchRandomQuestion()
+  state.data = await QuestionService.random()
   if (state.data.error) {
     state.error = true
     return

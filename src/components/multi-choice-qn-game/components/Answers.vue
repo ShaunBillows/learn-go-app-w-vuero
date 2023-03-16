@@ -1,6 +1,6 @@
 <template>
   <div class="pricing-wrapper pt-4">
-    <!-- Answer card-->
+    <!-- Answer cards -->
     <div
       v-for="(answer, i) in answers"
       :key="i"
