@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, ref } from 'vue'
+import { defineProps } from 'vue'
 
 interface Answer {
   text: string
@@ -51,7 +51,7 @@ const clickAnswer = (answer: Answer) => {
   answer['clicked'] = true
 }
 
-const imgSrc = ref('/images/logos/logo/logo-accent.svg')
-const imgSrcCorrect = ref('/images/logos/logo/logo.svg')
-const imgSrcIncorrect = ref('/images/logos/logo/logo-platinum.svg')
+const imgSrc = '/images/logos/logo/logo-accent.svg'
+const imgSrcCorrect = '/images/logos/logo/logo.svg'
+const imgSrcIncorrect = '/images/logos/logo/logo-platinum.svg'
 </script>

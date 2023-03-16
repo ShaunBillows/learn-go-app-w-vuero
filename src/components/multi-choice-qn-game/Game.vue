@@ -115,6 +115,7 @@ const getQuestion = async () => {
   state.data = await fetchRandomQuestion()
   if (state.data.error) {
     state.error = true
+    return
   }
   state.answers = [
     { text: state.data.answer, correct: true },
@@ -127,15 +128,16 @@ const answerQuestion = (answer: Answer) => {
   if (answer.correct && !state.questionAttempted) {
     state.score++
   }
+  if (!state.questionAttempted) {
+    state.total++
+  }
   state.questionAttempted = true
 }
 
-const incrementTotal = () => {
-  state.total++
-}
-
 const clickNextQuestion = () => {
-  incrementTotal()
+  if (!state.questionAttempted) {
+    state.total++
+  }
   getQuestion()
 }
 
